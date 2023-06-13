@@ -14,7 +14,7 @@ export const Data = [
     {
         Text: "Messages",
         icon :  < MessageOutlined/>,
-        link :"/"
+        link :"/user/message"
     },
     {
        Text: "Tenancy Management",
@@ -29,7 +29,7 @@ export const Data = [
     {
        Text: "Help & Support",
        icon :  <HelpCenterOutlined />,
-       link :"/"
+       link :"/user/help"
     }, 
 
     

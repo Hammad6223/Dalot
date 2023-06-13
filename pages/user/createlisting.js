@@ -6,7 +6,7 @@ import { Grid } from '@mui/material'
 const createlisting = () => {
   return (
     <Layout>
-        <Grid container marginTop={5}  sx={{width:{xs:'100%',sm:'80%',md:'90%' } ,marginX:'auto'}} >
+        <Grid container   sx={{width:{xs:'100%',sm:'80%',md:'90%' } ,marginX:'auto'}} >
 
             <Grid item xs={12} md={5} lg={4} paddingRight={{xs:0,md:5}} >
                 <LeftBar />

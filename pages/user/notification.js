@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '@/Components/User/Layout'
-import NewListing from '@/Components/User/NewListing'
+import Notification  from '@/Components/User/Notification '
 import LeftBar from '@/Components/User/LeftBar'
 import { Grid } from '@mui/material'
 
 
-const newlisting = () => {
+const notification = () => {
 
 return (
 
@@ -18,11 +18,11 @@ return (
    </Grid>
 
    <Grid  lg={8} item  md={7} xs={12}  sx={{marginTop: {xs:8 ,md:0} }}> 
-   <NewListing />
+   <Notification />
    </Grid>
 
    </Grid>
 </Layout>
 )
 }
-export default newlisting
+export default notification 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '@/Components/User/Layout'
-import Profile from '@/Components/User/Profile'
+import Help from '@/Components/User/Help'
 import LeftBar from '@/Components/User/LeftBar'
 import { Grid } from '@mui/material'
 const tenancy = () => {
@@ -13,7 +13,7 @@ const tenancy = () => {
             </Grid>
         <Grid  lg={8} item  xs={12}  sx={{marginTop: {xs:8 ,lg:0} }}> 
         
-    <Profile />
+    <Help/>
 </Grid>
 
     </Grid>

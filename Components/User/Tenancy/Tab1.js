@@ -1,5 +1,6 @@
-import { Grid,Typography,Stack, Button,TextField,RadioGroup  ,Radio ,FormControlLabel,MenuItem, Box,IconButton} from '@mui/material'
+import { Grid,Typography,Stack, Button,RadioGroup  ,Radio ,FormControlLabel,MenuItem, Box,IconButton} from '@mui/material'
 import React from 'react'
+import { Field } from '@/styles/Field';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import InfoIcon from '@mui/icons-material/Info';
 const Tab1 = () => {
@@ -41,10 +42,10 @@ return (
             </Grid>
 
             <Grid item  xs={12} sm={4.5} sx={{display:'flex'}}>
-               <TextField  fullWidth placeholder='First Name'  size='small' />
+               <Field  fullWidth placeholder='First Name'  size='small' />
             </Grid>
             <Grid item  xs={12}  sm={4.5}>
-               <TextField  fullWidth placeholder='Last  Name'  size='small'/>
+               <Field  fullWidth placeholder='Last  Name'  size='small'/>
             </Grid>
             <Grid item xs={12}  sm={2.5}> 
                <Button sx={{backgroundColor:'#8F8F8F',paddingY:1,color:'#fff',display:{xs:'none' ,sm:'block'}}}  variant='contained' fullWidth onClick={handleAddField}> Add Another</Button> 
@@ -76,10 +77,10 @@ return (
            </Grid>
 
             <Grid item xs={12}  sm={4.5} sx={{display:'flex'}}>
-               <TextField  fullWidth placeholder='+44 123 3456 7'  size='small' />
+               <Field  fullWidth placeholder='+44 123 3456 7'  size='small' />
             </Grid>
             <Grid item xs={12}  sm={4.5}>
-               <TextField  fullWidth placeholder='tenantmail@gmail.com'  size='small'/>
+               <Field  fullWidth placeholder='tenantmail@gmail.com'  size='small'/>
             </Grid>
             <Grid item xs={12}  sm={2.5}> 
                <Button sx={{backgroundColor:'#8F8F8F',paddingY:1,color:'#fff',display:{xs:'none' ,sm:'block'}}}  variant='contained' fullWidth onClick={handleAddFieldContact}> Add Another</Button> 
@@ -120,14 +121,14 @@ return (
             </Typography>
             <InfoIcon fontSize='10px' sx={{color:'#9D9A9A' }}/> 
          </Stack>
-         <TextField     defaultValue='0'  select      size='small' >
+         <Field     defaultValue='0'  select      size='small' >
             {/* Label */}
             <MenuItem  value={0} >
                <Typography variant='body1' color={'#8F8F8F'}>Select Type </Typography>
             </MenuItem>
             <MenuItem  value={1} > Buy</MenuItem>
             <MenuItem  value={2} > Rent</MenuItem>
-         </TextField>
+         </Field>
       </Stack>
    </Grid>
 
@@ -141,7 +142,7 @@ return (
                </Typography>
                <InfoIcon fontSize='10px' sx={{color:'#9D9A9A' }}/> 
             </Stack>
-            <TextField    size='small' />
+            <Field    size='small' />
          </Stack>
       </Grid>
       <Grid item  xs={12} sm={6}>
@@ -173,7 +174,7 @@ return (
                </Typography>
                <InfoIcon fontSize='10px' sx={{color:'#9D9A9A' }}/> 
             </Stack>
-            <TextField    size='small'  type='date'/>
+            <Field    size='small'  type='date'/>
          </Stack>
       </Grid>
 
@@ -186,7 +187,7 @@ return (
                </Typography>
                <InfoIcon fontSize='10px' sx={{color:'#9D9A9A' }}/> 
             </Stack>
-            <TextField    size='small' type='date' />
+            <Field    size='small' type='date' />
          </Stack>
       </Grid>
 

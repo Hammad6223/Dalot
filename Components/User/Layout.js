@@ -12,7 +12,7 @@ const Layout = ({children}) => {
       <CssBaseline />
         <TopBar />
       
-        <Box  sx={{ pt:5  }}>
+        <Box  >
           <Toolbar />
           <SideBar />
 

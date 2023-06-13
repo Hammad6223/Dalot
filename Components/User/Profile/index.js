@@ -44,7 +44,7 @@ const index = () => {
 
   return (
     <Box>
-<Box sx={{display:'flex',justifyContent:'space-between'}}> 
+<Box sx={{display:'flex',justifyContent:'space-between',alignItems:'center'}}> 
      <Typography fontWeight={800}  variant={isSmallscreen ? 'p' : 'h5'}   > Account Settings </Typography>
      <Button variant='outlined'  size={isSmallscreen ? 'small' : 'medium'} >See Public View</Button>
      </Box>

@@ -17,7 +17,7 @@ const theme = createTheme({
   light:'#8A8888',
 
 
-  primary:  '#2E3192;',
+  primary:  '#2E3192',
   palette: {
     primary: {
       main: '#2E3192',
@@ -41,20 +41,6 @@ const theme = createTheme({
   },
 
   components: {
-    MuiInputBase: {
-        styleOverrides: {
-            root: {
-              backgroundColor:'#F9F9F9',
-              // border: '1px solid #E6E6E6',
-              
-       '&:hover fieldset':{
-        border:'none'
-       }
-              
-            }
-        }
-    },
-
 
     MuiButton: {
       styleOverrides: {
@@ -74,3 +60,18 @@ const theme = createTheme({
 });
 
 export default theme;
+
+
+    // MuiInputBase: {
+    //     styleOverrides: {
+    //         root: {
+    //           // backgroundColor:'#F9F9F9',
+    //           // border: '1px solid #E6E6E6',
+              
+    //    '&:hover fieldset':{
+    //     // border:'none'
+    //    }
+              
+    //         }
+    //     }
+    // },

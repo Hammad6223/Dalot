@@ -1,8 +1,9 @@
-import { Grid, Typography ,Stack, TextField,MenuItem,Box,Button,InputBase,IconButton,Paper} from '@mui/material'
+import { Grid, Typography ,Stack,MenuItem,Box,Button,InputBase,IconButton,Paper} from '@mui/material'
 import React from 'react'
 import InfoIcon from '@mui/icons-material/Info';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router';
+import { Field } from '@/styles/Field';
 const Tab1 = ({setActiveTab}) => {
    const router = useRouter();
    const PaperStyle ={
@@ -26,7 +27,7 @@ return (
 
 
          {index == 0 ?   
-         <TextField     defaultValue='0'  select      size='small' sx={{width:{xs:'100%', lg:'32.1%' } }}>
+         <Field     defaultValue='0'  select      size='small' sx={{width:{xs:'100%', lg:'32.1%' } }}>
 
             {/* Label */}
             <MenuItem  value={0} > <Typography variant='body1' color={'#8F8F8F'}>{item.Label} </Typography>    </MenuItem>
@@ -35,7 +36,7 @@ return (
             <MenuItem  value={index1 + 1} key={index}> {item1.Title}</MenuItem> 
             )) }
 
-         </TextField>
+         </Field>
 
          :
          index == 1 ?  
@@ -48,10 +49,10 @@ return (
          : 
 
          item.Menu == null ?  
-         <TextField    fullWidth placeholder={item.Placeholder}  type={item.Type} size='small'/>
+         <Field    fullWidth placeholder={item.Placeholder}  type={item.Type} size='small'/>
          :
 
-         <TextField     defaultValue='0'  select   fullWidth    size='small'>
+         <Field     defaultValue='0'  select   fullWidth    size='small'>
 
             {/* Label */}
 
@@ -61,7 +62,7 @@ return (
             <MenuItem  value={index1 + 1} key={index}> {item1.Title}</MenuItem> 
             )) }
 
-         </TextField>
+         </Field>
          }
 
 

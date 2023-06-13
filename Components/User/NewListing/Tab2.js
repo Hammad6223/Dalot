@@ -1,7 +1,8 @@
-import { Grid, Typography ,Stack, TextField,MenuItem,Box,Button,InputBase,IconButton,Paper, TextareaAutosize} from '@mui/material'
+import { Grid, Typography ,Stack,MenuItem,Box,Button,InputBase,IconButton,Paper, TextareaAutosize} from '@mui/material'
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import InfoIcon from '@mui/icons-material/Info';
+import { Field } from '@/styles/Field';
 const Tab2 = ({setActiveTab}) => {
 const PaperStyle ={
 ml: 2,backgroundColor:'#F9F9F9',border: '1px solid #E6E6E6', display: 'flex', 
@@ -33,13 +34,13 @@ return (
          </Stack>
        
       
-   <TextField multiline fullWidth placeholder='(Max 500 words)' rows={5} />
+   <Field multiline fullWidth placeholder='(Max 500 words)' rows={5}  />
 
    </Stack>
 
     </Grid>
 
-    <Grid item xs={12} sx={{marginY:{xs:3,md:3} ,display:'flex',justifyContent:'space-between'}}>
+    <Grid item xs={12} sx={{marginY:{xs:3,md:5} ,display:'flex',justifyContent:'space-between'}}>
     <Button variant='outlined' sx={{ paddingX:{xs:5,sm:8}}}  onClick={()=> setActiveTab(0)}> Back</Button>
     <Button variant='contained' sx={{ paddingX:{xs:5,sm:8}}} onClick={()=> setActiveTab(2)} > Next</Button>
 

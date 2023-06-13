@@ -1,6 +1,7 @@
-import { Grid, Typography ,Stack, TextField,MenuItem,Box,Button,InputBase,IconButton,Paper} from '@mui/material'
+import { Grid, Typography ,Stack,MenuItem,Box,Button,InputBase,IconButton,Paper} from '@mui/material'
 import React from 'react'
 import InfoIcon from '@mui/icons-material/Info';
+import { Field } from '@/styles/Field';
 import SearchIcon from '@mui/icons-material/Search';
 const Tab4 = ({setActiveTab}) => {
    const PaperStyle ={
@@ -24,16 +25,16 @@ return (
 
 
          {index == 0 ?   
-      <TextField    fullWidth placeholder={item.Placeholder}  type={item.Type} size='small' sx={{width:{md:'100%', lg:'32.1%' } }}/>
+      <Field    fullWidth placeholder={item.Placeholder}  type={item.Type} size='small' sx={{width:{md:'100%', lg:'32.1%' } }}/>
 
          :
       
 
          item.Menu == null ?  
-         <TextField    fullWidth placeholder={item.Placeholder}  type={item.Type} size='small'/>
+         <Field    fullWidth placeholder={item.Placeholder}  type={item.Type} size='small'/>
          :
 
-         <TextField     defaultValue='0'  select   fullWidth    size='small'>
+         <Field     defaultValue='0'  select   fullWidth    size='small'>
 
             {/* Label */}
 
@@ -43,7 +44,7 @@ return (
             <MenuItem  value={index1 + 1} key={index}> {item1.Title}</MenuItem> 
             )) }
 
-         </TextField>
+         </Field>
          }
 
 
@@ -52,11 +53,11 @@ return (
    </Grid>
    ))}
     
-    <Grid item xs={12} sx={{marginY:{xs:3,md:1,lg:5} ,display:'flex',justifyContent:'space-between'}}>
-    <Button variant='outlined' sx={{ paddingX:{xs:5,sm:8}}}   onClick={()=> setActiveTab(2)}> Back</Button>
-    <Stack direction={'row'} spacing={1}>
-    <Button variant='outlined' sx={{ paddingX:{xs:3}}}  > Preview Listing</Button>
-    <Button variant='contained' sx={{ paddingX:{xs:3}}}  > Proceed to Payment</Button>
+    <Grid item xs={12} sx={{marginY:{xs:3,md:1,lg:12} ,display:'flex',justifyContent:'space-between'}}>
+    <Button variant='outlined' sx={{ paddingX:{xs:5, sm :8 ,md:5, lg:8},display:{xs:'none',sm:'block'}}}   onClick={()=> setActiveTab(2)}  > Back</Button>
+    <Stack direction={'row'} spacing={1} marginLeft={{xs:'auto' , sm:'none'}}>
+    <Button variant='outlined' sx={{ paddingX:{xs:1.5,md:2,lg:3}}}  size='small'> Preview Listing</Button>
+    <Button variant='contained' sx={{ paddingX:{xs:1.5,md:2,lg:3}}}  size='small'> Proceed to Payment</Button>
     </Stack>
    
 
