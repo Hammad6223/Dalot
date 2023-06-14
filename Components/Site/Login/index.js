@@ -4,7 +4,9 @@ import { Field } from '@/styles/Field';
 import InfoIcon from '@mui/icons-material/Info';
 import { Data } from './Constant';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 const index = () => {
+  const router = useRouter();
   return (
     <Box>
       <Typography sx={{fontWeight:700,letterSpacing:3}} variant='h5'>CREATE A PROFILE</Typography>
@@ -35,7 +37,7 @@ const index = () => {
          <FormControlLabel control={<Checkbox defaultChecked  size='small'/>} label="I agree to the privacy policy and terms of service." />
          </Box>
          <Box sx={{display:'flex',justifyContent:'center'}}>
-         <Button variant='contained' sx={{paddingX:10,marginTop:1}}> SIGN UP </Button>
+         <Button variant='contained' sx={{paddingX:10,marginTop:1}}  onClick={() => router.push('/user/mylisting')}> SIGN UP </Button>
          </Box>
         </Grid>
 
