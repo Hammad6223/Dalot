@@ -34,7 +34,7 @@ const TopBar = () => {
             <Link href={item.link} style={{textDecoration:'none'}} key={index} > <Typography   sx={{paddingTop:'8px',fontWeight:700}} >   {item.Text}   </Typography> </Link> 
             ))}
 
-     <Button variant='outlined'  size="medium"  sx={{ padding:'5px 30px 5px 30px', border : '2px solid #2E3192', borderRadius:'14px'}}  onClick={() => router.push('/user/mylisting')} > LOG &nbsp; IN</Button>
+     <Button variant='outlined'  size="medium"  sx={{ padding:'5px 30px 5px 30px', border : '2px solid #2E3192', borderRadius:'14px'}}  onClick={() => router.push('/site/login')} > LOG &nbsp; IN</Button>
           
             
      </Stack>

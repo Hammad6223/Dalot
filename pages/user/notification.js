@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '@/Components/User/Layout'
-import Notification  from '@/Components/User/Notification '
+import Notification  from '@/Components/User/Notification'
 import LeftBar from '@/Components/User/LeftBar'
 import { Grid } from '@mui/material'
 
