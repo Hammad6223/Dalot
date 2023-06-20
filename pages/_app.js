@@ -7,6 +7,9 @@ import { CacheProvider } from '@emotion/react';
 import theme from '../public/Utils/theme';
 import createEmotionCache from '../public/Utils/createEmotionCache';
 import { NavBarContext } from '@/contexts/NavBarContext';
+import { LoginContext } from '@/contexts/LoginContext';
+import { DrawerContext } from '@/contexts/DrawerContext';
+import { ConstantContext } from '@/contexts/ConstantContext';
 
 // console.log(theme);
 
@@ -24,9 +27,20 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+
+        <ConstantContext >
         <NavBarContext>
+        <LoginContext>
+        <DrawerContext >
+
         <Component {...pageProps} />
+
+        </DrawerContext>
+        </LoginContext>
         </NavBarContext>
+        </ConstantContext>
+
+        
       </ThemeProvider>
     </CacheProvider>
   );
