@@ -5,18 +5,18 @@ import SideBar from '@/Components/Site/Navbar/SideBar'
 
 
 
-import Login from '@/Components/Site/Login'
+import Forget from '@/Components/Site/Forget'
 
-const login = () => {
+const signup = () => {
   return (
     <Box sx={{ marginX:{xs:2,sm:3} }}>
     <CssBaseline />
       <TopBar />
       <SideBar />
-      <Box >
+      <Box  sx={{ marginX:{xs:0,sm:8,md:8,lg:13} }}>
         <Toolbar />
     
-        <Login />
+        <Forget />
 
        
         </Box>
@@ -27,7 +27,7 @@ const login = () => {
 }
 
 
-export default login
+export default signup
 
 
 

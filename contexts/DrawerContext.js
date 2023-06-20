@@ -3,11 +3,10 @@ const HandleContext = createContext();
 
 
 
-const NavBarContext = ({children}) => {
+const DrawerContext = ({children}) => {
 
     const [mobileOpen, setMobileOpen] = useState(false);
-    
- 
+
     const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
     };
@@ -28,4 +27,4 @@ const GlobalHandleContext = ()=>{
 return useContext(HandleContext);
 }
 
-export  {NavBarContext ,GlobalHandleContext };
+export  {DrawerContext ,GlobalHandleContext };

@@ -15,10 +15,10 @@ export const roboto = Roboto({
 const theme = createTheme({
 
   light:'#8A8888',
-
-
   primary:  '#2E3192',
+  
   palette: {
+     
     primary: {
       main: '#2E3192',
     },
@@ -47,6 +47,7 @@ const theme = createTheme({
           root: {
          textTransform:'capitalize',
          fontWeight: 700,
+
      }
             
           }

@@ -1,59 +1,86 @@
 import { Box, Grid, Typography,Stack,FormControlLabel ,Checkbox, Button} from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Field } from '@/styles/Field';
 import InfoIcon from '@mui/icons-material/Info';
-import { Data } from './Constant';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import theme from '@/public/Utils/theme';
+import Link from 'next/link';
+
+import { GlobalLoginContext } from '@/contexts/LoginContext';
+
+
 const index = () => {
-  const router = useRouter();
-  return (
-    <Box>
-      <Typography sx={{fontWeight:700,letterSpacing:3}} variant='h5'>CREATE A PROFILE</Typography>
+   const Handler = GlobalLoginContext();
 
-      <Grid container spacing={4} marginTop={3}>
+   useEffect(() => {
+    Handler.setcheck(2)
+   }, []);
+   
+   console.log(Handler.check)
+const router = useRouter();
 
-        <Grid item  xs={7}>
-          <Grid container  spacing={2}> 
+return (
+
+<Box>
+ 
+
+   <Grid container   sx={{marginTop:{xs:0,sm:3},width:{xs:'100%' ,md:'90%',lg:'70%'} ,marginX:'auto' }}>
+
+      <Grid item  xs={12} sm={8} md={5} sx={{marginX:'auto'}}>
+
+      <Typography sx={{fontWeight:700,letterSpacing:3,fontSize:{xs:'1.3rem',sm:'1.5rem'}}}  >LOG IN</Typography>
+      <Typography sx={{color:'#8A8888'}}>Gain access for the rental experience</Typography>
+
+         <Grid container  spacing={2} marginTop={2}>
+
           
-   {Data.map((item,index)=> (
-          <Grid item xs={item.Size} key={index}>
 
-        <Stack spacing={1.5}>
+            <Grid item  xs={12}  >
 
-       <Stack direction={'row'} spacing={1} sx={{display:'flex',alignItems:'center'}}>
-       <Typography fontWeight={700}> {item.Title} </Typography>
-       <InfoIcon fontSize='10px' sx={{color:'#9D9A9A' ,display:{xs:'none',lg:'block'}}}/> 
-       </Stack>
+               <Stack spacing={1.5}>
+                  <Stack direction={'row'} spacing={1} sx={{display:'flex',alignItems:'center'}}>
+                     <Typography fontWeight={700}>Email </Typography>
+                     <InfoIcon fontSize='10px' sx={{color:'#9D9A9A' }}/> 
+                  </Stack>
+                  <Field    fullWidth   type='email' size='small' />
+               </Stack>
 
-       <Field    fullWidth   type={item.Type} size='small'/>
+      
 
-         </Stack>
+           </Grid>
+
+  <Grid item  xs={12}  >
+
+               <Stack spacing={1.5}>
+                  <Stack direction={'row'} spacing={1} sx={{display:'flex',alignItems:'center'}}>
+                     <Typography fontWeight={700}>Password </Typography>
+                     <InfoIcon fontSize='10px' sx={{color:'#9D9A9A' }}/> 
+                  </Stack>
+                  <Field    fullWidth   type='email' size='small' />
+               </Stack>
+
+      
+
          </Grid>
-     
-   )) }
-         </Grid>
-         <Box sx={{marginTop:5}}>
-         <FormControlLabel control={<Checkbox defaultChecked  size='small'/>} label="I agree to the privacy policy and terms of service." />
-         </Box>
-         <Box sx={{display:'flex',justifyContent:'center'}}>
-         <Button variant='contained' sx={{paddingX:10,marginTop:1}}  onClick={() => router.push('/user/mylisting')}> SIGN UP </Button>
-         </Box>
+       
+         <Stack sx={{marginX:'auto',alignItems:'center' ,marginTop:3}} spacing={1}>
+            <Button variant='contained' sx={{paddingX:13,marginTop:1}} size='large'  onClick={() => router.push('/user/mylisting')}> Login </Button>
+       <Link href={'/site/forget' } style={{textDecoration:'none'}}>    <Typography sx={{color:theme.primary,fontWeight:800}} > Forgot Password? </Typography> </Link>
+           </Stack>
+
         </Grid>
-
-        <Grid item xs={5} > 
-
-        <Box  sx={{width:'100%' ,height:'100%',position:'relative'}}>
-        <Image  src="/Images/login.png"   alt="Logo"  fill/> 
-
-        </Box>
-
-          </Grid>
-
       </Grid>
+      <Grid item xs={7}   sx={{display:{xs:'none',md:'block'} }} >
+         <Box   sx={{width: { xs:'350px' ,lg:'400px' } ,height:{xs:'290px',lg:'350px'} , position:'relative',marginLeft:{xs:10,lg:20} }}>
+         <Image  src="/Images/login.png"   alt="Logo"  fill/>
+      </Box>
+       
+    </Grid>
 
-    </Box>
-  ) 
+ </Grid>
+
+</Box>
+) 
 }
-
 export default index
